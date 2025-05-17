@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -69,6 +70,7 @@ export default {
         brand: {
           primary: '#0891b2', // Teal-like blue
           secondary: '#7c3aed', // Electric purple
+          accentYellow: '#FFD700', // Vibrant Yellow (Gold) - New
         },
         neutral: {
           DEFAULT: '#f8f9fa', // Soft neutral background for sections
@@ -107,3 +109,4 @@ export default {
 	},
 	plugins: [require("tailwindcss-animate")],
 } satisfies Config;
+
