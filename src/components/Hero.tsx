@@ -10,7 +10,7 @@ const Hero: React.FC = () => {
         <div className="md:flex md:items-center md:gap-12">
           {/* Text Content */}
           <div className="md:w-1/2 space-y-6 text-center md:text-left">
-            <h1 className="text-5xl font-bold tracking-tighter sm:text-6xl md:text-7xl">
+            <h1 className="text-5xl font-bold tracking-tighter sm:text-6xl md:text-7xl filter drop-shadow-[0_2px_2px_rgba(0,0,0,0.4)]">
               <span className="block">Hello, I'm</span>
               <span className="block text-brand-accentYellow">Utsava Patel</span>
             </h1>
@@ -33,8 +33,8 @@ const Hero: React.FC = () => {
 
           {/* Image Placeholder */}
           <div className="md:w-1/2 mt-12 md:mt-0 flex justify-center md:justify-end">
-            <div className="w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full bg-primary-foreground/10 flex items-center justify-center border-4 border-brand-accentYellow/50">
-              <span className="text-xl text-primary-foreground/70">Professional Photo</span>
+            <div className="w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full bg-primary-foreground/10 flex items-center justify-center border-4 border-brand-accentYellow/50 shadow-xl">
+              <span className="text-lg text-primary-foreground/60">Professional Photo</span>
             </div>
           </div>
         </div>
@@ -49,4 +49,3 @@ const Hero: React.FC = () => {
 };
 
 export default Hero;
-
