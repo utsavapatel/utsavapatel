@@ -2,14 +2,9 @@
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Download } from "lucide-react";
+import EducationItem from './EducationItem'; // Import the new component
 
-const EducationItem: React.FC<{ degree: string; institution: string; years: string }> = ({ degree, institution, years }) => (
-  <div className="mb-4">
-    <h4 className="font-semibold text-neutral-text">{degree}</h4>
-    <p className="text-neutral-muted">{institution}</p>
-    <p className="text-sm text-neutral-muted">{years}</p>
-  </div>
-);
+// Remove the old EducationItem functional component definition that was here
 
 const About: React.FC = () => {
   return (
@@ -31,8 +26,8 @@ const About: React.FC = () => {
               <li>Developing secure and scalable systems.</li>
               <li>Collaborative team player with strong communication.</li>
             </ul>
-            <Button variant="outline" className="border-brand-primary text-brand-primary hover:bg-brand-primary/10">
-              <Download className="mr-2 h-4 w-4" /> Download Resume (PDF)
+            <Button className="bg-brand-accentYellow hover:bg-brand-accentYellow/90 text-neutral-text" size="lg">
+              <Download className="mr-2 h-5 w-5" /> Download Resume (PDF)
             </Button>
           </div>
           <div>
