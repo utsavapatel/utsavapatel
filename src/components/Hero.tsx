@@ -1,11 +1,8 @@
-
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { ArrowDown } from 'lucide-react';
-
 const Hero: React.FC = () => {
-  return (
-    <section id="home" className="w-full py-20 md:py-32 lg:py-40 bg-brand-secondary text-primary-foreground">
+  return <section id="home" className="w-full py-20 md:py-32 lg:py-40 bg-brand-secondary text-primary-foreground">
       <div className="container mx-auto px-4 md:px-6">
         <div className="md:flex md:items-center md:gap-12">
           {/* Text Content */}
@@ -14,9 +11,7 @@ const Hero: React.FC = () => {
               <span className="block">Hello, I'm</span>
               <span className="block text-brand-accentYellow">Utsava Patel</span>
             </h1>
-            <p className="text-xl md:text-2xl font-medium">
-              Full Stack Developer | Web & Mobile Solutions | Scalable. Secure. Elegant.
-            </p>
+            <p className="text-xl md:text-2xl font-medium">Full Stack Developer | Web & Mobile Solutions.</p>
             <p className="text-lg text-primary-foreground/80">
               Experienced Full Stack Developer specializing in building robust and innovative applications.
               Let's create something amazing together.
@@ -44,8 +39,6 @@ const Hero: React.FC = () => {
           </a>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Hero;
