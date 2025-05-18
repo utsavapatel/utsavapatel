@@ -9,7 +9,7 @@ const NEW_PROJECTS_DATA = [
     title: "Drive Test Booking System",
     description: "A web application for booking G2/G driving tests, managing appointments, and viewing results with role-based authentication for users and admins. Features a Node.js/Express RESTful API and MongoDB for data storage.",
     technologies: ["Express.js", "REST APIs", "MongoDB", "Node.js"],
-    imageUrl: "/placeholder.svg",
+    imageUrl: "https://i.postimg.cc/vBQc4m99/img.png",
     githubUrl: "#",
     liveUrl: "#",
   },
@@ -17,7 +17,7 @@ const NEW_PROJECTS_DATA = [
     title: "Mobile Hub - Ecommerce Application",
     description: "An Android e-commerce app for mobile devices. Users can browse categories, products, search, and place orders via online payment or COD, with order tracking.",
     technologies: ["Java", "JavaScript", "XML", "Android Development"],
-    imageUrl: "/placeholder.svg",
+    imageUrl: "https://i.postimg.cc/Vkm6G6Gh/Mobile-Hub-Logo.png",
     githubUrl: "#",
     liveUrl: "#",
   },
@@ -25,7 +25,7 @@ const NEW_PROJECTS_DATA = [
     title: "Pop Balloon Game – Interactive Android Gaming Application",
     description: "An engaging Android game where players pop balloons while avoiding bombs. Features include a scoring system, limited lives, animations, sound effects, and XML-based UI.",
     technologies: ["XML", "Android Development", "Kotlin"],
-    imageUrl: "/placeholder.svg",
+    imageUrl: "https://i.postimg.cc/FRLNs5Cc/Pop-Balloon-logo.jpg",
     githubUrl: "#",
     liveUrl: "#",
   },
@@ -33,7 +33,7 @@ const NEW_PROJECTS_DATA = [
     title: "SmartTag – Road Speed Compliance & Monitoring App",
     description: "An Android app promoting safer driving by providing real-time insights into speed limits, regulatory guidelines, and the economic impact of road safety compliance.",
     technologies: ["Java", "XML", "Android Development"],
-    imageUrl: "/placeholder.svg",
+    imageUrl: "https://i.postimg.cc/TYX7sMrS/Smart-Tag-Logo.png",
     githubUrl: "#",
     liveUrl: "#",
   },
@@ -41,7 +41,7 @@ const NEW_PROJECTS_DATA = [
     title: "E-Shopper’s Hub – E-Commerce Management System",
     description: "An e-commerce management system for administrators to manage stock, users, and orders, ensuring smooth online business operations via a dynamic web interface.",
     technologies: ["Servlets", "JavaScript", "CSS", "NetBeans", "HTML", "JSP"],
-    imageUrl: "/placeholder.svg",
+    imageUrl: "https://i.postimg.cc/SxnM7jnp/E-shopper-s-HUB-logo.webp",
     githubUrl: "#",
     liveUrl: "#",
   },
@@ -49,7 +49,7 @@ const NEW_PROJECTS_DATA = [
     title: "Admin Panel – Web-Based Management System",
     description: "A dynamic admin panel for the Mobile Hub e-commerce app, managing product categories, orders, and customer feedback. Features a responsive PHP, HTML, CSS, JavaScript interface.",
     technologies: ["PHP", "JavaScript", "CSS", "HTML", "Relational Databases"],
-    imageUrl: "/placeholder.svg",
+    imageUrl: "https://i.postimg.cc/SsS89d8g/Admin-Panel-Logo.png",
     githubUrl: "#",
     liveUrl: "#",
   },
@@ -57,7 +57,7 @@ const NEW_PROJECTS_DATA = [
     title: "Canon Camera & Lenses – E-Commerce Website",
     description: "A WooCommerce-based e-commerce site on WordPress for selling Canon cameras and lenses, featuring product purchasing, order tracking, and Stripe payment gateway integration.",
     technologies: ["WooCommerce", "Stripe payment Gateway", "Relational Databases", "WordPress"],
-    imageUrl: "/placeholder.svg",
+    imageUrl: "https://i.postimg.cc/x1gb2HBH/Canon-Logo.jpg",
     githubUrl: "#",
     liveUrl: "#",
   },
@@ -69,11 +69,15 @@ const Portfolio: React.FC = () => {
       <div className="container mx-auto px-4 md:px-6">
         <h2 className="text-3xl font-bold tracking-tight text-center mb-4 text-neutral-text">My Projects</h2>
         <p className="text-center text-neutral-muted mb-12">Here's a selection of projects I've worked on, showcasing my skills and experience.</p>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"> {/* Increased gap for better spacing */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {NEW_PROJECTS_DATA.map((project) => (
-            <Card key={project.title} className="flex flex-col shadow-lg hover:shadow-xl transition-shadow duration-300 bg-card border border-border">
-              <CardHeader className="p-0"> {/* Removed padding to make image flush */}
-                <img src={project.imageUrl} alt={project.title} className="rounded-t-lg aspect-video object-cover w-full" />
+            <Card key={project.title} className="flex flex-col shadow-lg hover:shadow-xl transition-shadow duration-300 bg-card border border-border overflow-hidden group"> {/* Added overflow-hidden and group */}
+              <CardHeader className="p-0 relative h-48 md:h-56"> {/* Fixed height for consistency */}
+                <img 
+                  src={project.imageUrl} 
+                  alt={project.title} 
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" // Zoom effect on hover
+                />
               </CardHeader>
               <CardContent className="flex flex-col flex-grow p-6">
                 <CardTitle className="text-xl font-semibold text-neutral-text mb-2">{project.title}</CardTitle>

@@ -1,44 +1,54 @@
+
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { ArrowDown } from 'lucide-react';
+
 const Hero: React.FC = () => {
-  return <section id="home" className="w-full py-20 md:py-32 lg:py-40 bg-brand-secondary text-primary-foreground">
+  return (
+    <section id="home" className="w-full py-20 md:py-32 lg:py-36 bg-gradient-to-br from-brand-secondary to-purple-700 text-primary-foreground"> {/* Adjusted padding and added gradient */}
       <div className="container mx-auto px-4 md:px-6">
-        <div className="md:flex md:items-center md:gap-12">
+        <div className="md:flex md:items-center md:gap-12 lg:gap-16">
           {/* Text Content */}
-          <div className="md:w-1/2 space-y-6 text-center md:text-left">
-            <h1 className="text-5xl font-bold tracking-tighter sm:text-6xl md:text-7xl filter drop-shadow-[0_2px_2px_rgba(0,0,0,0.4)]">
+          <div className="md:w-1/2 lg:w-3/5 space-y-6 text-center md:text-left">
+            <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl filter drop-shadow-[0_2px_2px_rgba(0,0,0,0.4)]">
               <span className="block">Hello, I'm</span>
-              <span className="block text-brand-accentYellow">Utsava Patel</span>
+              <span className="block text-brand-accentYellow mt-1 md:mt-2">Utsava Patel</span>
             </h1>
-            <p className="text-xl md:text-2xl font-medium">Full Stack Developer | Web & Mobile Solutions.</p>
-            <p className="text-lg text-primary-foreground/80">
+            <p className="text-xl md:text-2xl font-medium text-primary-foreground/90">Full Stack Developer | Web & Mobile Solutions.</p>
+            <p className="text-lg text-primary-foreground/80 max-w-xl mx-auto md:mx-0">
               Experienced Full Stack Developer specializing in building robust and innovative applications.
               Let's create something amazing together.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-              <Button size="lg" className="bg-brand-accentYellow hover:bg-brand-accentYellow/90 text-neutral-text" asChild>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start pt-4">
+              <Button size="lg" className="bg-brand-accentYellow hover:bg-brand-accentYellow/90 text-neutral-text shadow-lg transform hover:scale-105 transition-transform duration-300" asChild>
                 <a href="#portfolio">View Portfolio</a>
               </Button>
-              <Button variant="outline" size="lg" className="border-brand-accentYellow text-brand-accentYellow hover:bg-brand-accentYellow/10 hover:text-neutral-text" asChild>
+              <Button variant="outline" size="lg" className="border-brand-accentYellow text-brand-accentYellow hover:bg-brand-accentYellow/10 hover:text-brand-accentYellow shadow-lg transform hover:scale-105 transition-transform duration-300" asChild>
                 <a href="#contact">Get in Touch</a>
               </Button>
             </div>
           </div>
 
-          {/* Image Placeholder */}
-          <div className="md:w-1/2 mt-12 md:mt-0 flex justify-center md:justify-end">
-            <div className="w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full bg-primary-foreground/10 flex items-center justify-center border-4 border-brand-accentYellow/50 shadow-xl">
-              <span className="text-lg text-primary-foreground/60">Professional Photo</span>
+          {/* Image */}
+          <div className="md:w-1/2 lg:w-2/5 mt-12 md:mt-0 flex justify-center md:justify-end">
+            <div className="relative group">
+              <div className="absolute -inset-0.5 bg-gradient-to-r from-brand-accentYellow to-yellow-400 rounded-full blur-lg opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt"></div>
+              <img
+                src="https://i.postimg.cc/jqZkwJHq/Utsava-Patel.jpg"
+                alt="Utsava Patel"
+                className="relative w-64 h-64 md:w-72 md:h-72 lg:w-80 lg:h-80 rounded-full object-cover border-4 border-white/50 shadow-xl transform group-hover:scale-105 transition-transform duration-300"
+              />
             </div>
           </div>
         </div>
-        <div className="mt-24 text-center animate-bounce">
-          <a href="#about">
-            <ArrowDown className="h-8 w-8 mx-auto text-brand-accentYellow hover:text-brand-accentYellow/80" />
+        <div className="mt-20 md:mt-24 text-center">
+          <a href="#about" aria-label="Scroll to About section">
+            <ArrowDown className="h-10 w-10 mx-auto text-brand-accentYellow hover:text-brand-accentYellow/80 animate-bounce" />
           </a>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default Hero;
