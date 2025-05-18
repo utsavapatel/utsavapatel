@@ -7,7 +7,6 @@ const NAV_LINKS = [
   { href: "#home", label: "Home" },
   { href: "#about", label: "About" },
   { href: "#skills", label: "Skills" },
-  // { href: "#services", label: "Services" }, // Removed
   { href: "#portfolio", label: "Portfolio" },
   { href: "#certifications", label: "Certifications" },
   { href: "#contact", label: "Contact" },
@@ -23,14 +22,15 @@ const Header: React.FC = () => {
         <a href="#home" className="mr-6 flex items-center space-x-2">
           <span className="font-bold text-lg text-brand-primary">Utsava Patel</span>
         </a>
-        <nav className="flex flex-1 items-center space-x-4 lg:space-x-6">
+        <nav className="flex flex-1 items-center space-x-1 lg:space-x-2"> {/* Adjusted spacing for links */}
           {NAV_LINKS.map((link) => (
             <a
               key={link.label}
               href={link.href}
-              className="text-sm font-medium text-neutral-muted transition-colors hover:text-brand-primary"
+              className="text-sm font-medium text-neutral-muted transition-colors hover:text-brand-primary relative group px-3 py-2" // Added padding for better hover area
             >
               {link.label}
+              <span className="absolute bottom-[2px] left-1/2 transform -translate-x-1/2 w-0 h-[2px] bg-brand-primary group-hover:w-3/4 transition-all duration-300"></span> {/* Animated underline */}
             </a>
           ))}
         </nav>

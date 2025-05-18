@@ -2,13 +2,11 @@
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Download } from "lucide-react";
-import EducationItem from './EducationItem'; // Import the new component
-
-// Remove the old EducationItem functional component definition that was here
+import EducationItem from './EducationItem';
 
 const About: React.FC = () => {
   return (
-    <section id="about" className="w-full py-16 md:py-24 bg-background">
+    <section id="about" className="w-full py-12 md:py-16 bg-background"> {/* Reduced padding */}
       <div className="container mx-auto px-4 md:px-6">
         <h2 className="text-3xl font-bold tracking-tight text-center mb-12 text-neutral-text">About Me</h2>
         <div className="grid md:grid-cols-2 gap-12 items-start">
@@ -26,8 +24,10 @@ const About: React.FC = () => {
               <li>Developing secure and scalable systems.</li>
               <li>Collaborative team player with strong communication.</li>
             </ul>
-            <Button className="bg-brand-accentYellow hover:bg-brand-accentYellow/90 text-neutral-text" size="lg">
-              <Download className="mr-2 h-5 w-5" /> Download Resume (PDF)
+            <Button asChild className="bg-brand-accentYellow hover:bg-brand-accentYellow/90 text-neutral-text" size="lg">
+              <a href="/resume/Utsava_Patel_Resume.pdf" download target="_blank" rel="noopener noreferrer">
+                <Download className="mr-2 h-5 w-5" /> Download Resume (PDF)
+              </a>
             </Button>
           </div>
           <div>
