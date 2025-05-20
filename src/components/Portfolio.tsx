@@ -25,7 +25,7 @@ const ALL_PROJECTS_DATA = [
     title: "Pop Balloon Game – Interactive Android Gaming Application",
     description: "An engaging Android game where players pop balloons while avoiding bombs. Features include a scoring system, limited lives, animations, sound effects, and XML-based UI.",
     technologies: ["XML", "Android Development", "Kotlin"],
-    imageUrl: "https://i.postimg.cc/htwSF1Kf/Pop-Balloon-logo.jpg",
+    imageUrl: "https://i.postimg.cc/SRs94DqY/Pop-Balloon-logo.jpg", // Updated image URL
     githubUrl: "#",
     liveUrl: "#",
   },
