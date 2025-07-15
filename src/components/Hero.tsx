@@ -34,7 +34,7 @@ const Hero: React.FC = () => {
             <div className="relative group">
               <div className="absolute -inset-0.5 bg-gradient-to-r from-primary to-pink-500 rounded-full blur-lg opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt"></div>
               <img
-                src="https://i.postimg.cc/jqZkwJHq/Utsava-Patel.jpg"
+                src="/lovable-uploads/bc13189d-3fa9-4605-86dc-bf15dfc1df92.png"
                 alt="Utsava Patel"
                 className="relative w-64 h-64 md:w-72 md:h-72 lg:w-80 lg:h-80 rounded-full object-cover border-4 border-background/50 shadow-xl transform group-hover:scale-105 transition-transform duration-300"
               />
